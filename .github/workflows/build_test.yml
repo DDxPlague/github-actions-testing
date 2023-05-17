@@ -1,5 +1,9 @@
 name: Build container image for ECR
 
+permissions:
+  id-token: write
+  contents: read
+  
 on:
   push:
     branches: 
@@ -7,7 +11,7 @@ on:
     - release/*
   pull_request:
     branches: [ "main" ]
-    
+
 jobs:
   build:
     name: Build Image
