@@ -8,11 +8,6 @@ on:
   pull_request:
     branches: [ "main" ]
     
-uses: aws-actions/configure-aws-credentials@v2 
-        with:
-          role-to-assume: arn:aws:iam::123456789012:role/my-github-actions-role
-          aws-region: aws-region-1
-
 jobs:
   build:
     name: Build Image
